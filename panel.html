@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fila de Mensagens WhatsApp</title>
+    <link rel="stylesheet" href="/src/styles.css">
+  </head>
+  <body>
+    <header class="panel-header">
+      <img src="./icons/icon-48.png" alt="" width="24" height="24">
+      <span>Fila de Mensagens WhatsApp</span>
+    </header>
+    <main>
+      <p id="error" role="alert" class="error" hidden></p>
+      <p id="feedback" role="status" hidden></p>
+      <form id="setup" hidden>
+        <h1 tabindex="-1" id="setup-title">Preparar fila</h1>
+        <label for="numbers">Números, um por linha</label>
+        <textarea id="numbers" rows="3" spellcheck="false" placeholder="(22) 99999-9999" aria-describedby="number-help"></textarea>
+        <p id="number-help" class="hint">Até 50 números. Use DDD ou + e código do país.</p>
+        <p id="import-summary" role="status" class="hint" hidden></p>
+        <ul id="issues" class="issues" aria-label="Erros na lista" hidden></ul>
+        <ul id="contacts" class="contacts" aria-label="Destinatários selecionados" hidden></ul>
+
+        <label for="template">Mensagem</label>
+        <textarea id="template" rows="3"></textarea>
+        <label class="check consent">
+          <input id="consent" type="checkbox">
+          <span>Confirmo que os destinatários autorizaram o contato.</span>
+        </label>
+        <button type="submit" class="primary" id="start" disabled>Criar fila</button>
+      </form>
+
+      <section id="queue" aria-labelledby="queue-title" hidden>
+        <h1 tabindex="-1" id="queue-title">Fila de mensagens</h1>
+        <p id="position" class="hint"></p>
+        <h2 id="recipient-title" tabindex="-1"></h2>
+        <div class="actions">
+          <button type="button" id="back">Voltar</button>
+          <button type="button" id="open" class="primary">Abrir conversa e avançar</button>
+          <button type="button" id="next">Próximo</button>
+        </div>
+        <ol id="queue-contacts" aria-label="Status dos destinatários"></ol>
+      </section>
+
+      <footer id="data-actions" hidden>
+        <button type="button" id="delete-data" class="danger" disabled>Apagar dados locais</button>
+      </footer>
+      <dialog id="confirmation" aria-labelledby="confirm-message">
+        <form method="dialog">
+          <p id="confirm-message"></p>
+          <div class="actions">
+            <button value="cancel" autofocus>Cancelar</button>
+            <button value="confirm" class="danger">Confirmar</button>
+          </div>
+        </form>
+      </dialog>
+    </main>
+    <script type="module" src="/src/app.ts"></script>
+  </body>
+</html>

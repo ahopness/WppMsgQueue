@@ -1,0 +1,78 @@
+:root {
+  color-scheme: light dark;
+  font: 14px/1.45 system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; }
+.panel-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-bottom: 1px solid color-mix(in srgb, CanvasText 18%, Canvas);
+  font-weight: 600;
+}
+.panel-header img { flex: none; }
+main { padding: 14px; }
+h1, h2, p { margin: 0; }
+h1 { font-size: 18px; margin-bottom: 12px; }
+h2 { font-size: 16px; overflow-wrap: anywhere; }
+label { display: block; font-weight: 600; }
+textarea, button {
+  font: inherit;
+  border: 1px solid GrayText;
+  border-radius: 4px;
+}
+textarea {
+  display: block;
+  width: 100%;
+  padding: 6px 8px;
+  margin: 4px 0;
+  resize: vertical;
+}
+button {
+  background: Canvas;
+  color: CanvasText;
+  padding: 5px 8px;
+  min-height: 32px;
+  cursor: pointer;
+}
+button:disabled { opacity: .55; cursor: default; }
+.primary { background: #166148; border-color: #166148; color: #fff; }
+.error, .danger { color: light-dark(#9a2622, #ff9a92); }
+#feedback, #error { margin-bottom: 10px; }
+:focus-visible { outline: 2px solid Highlight; outline-offset: 2px; }
+.hint { font-size: 12px; }
+#import-summary { margin-top: 6px; }
+#template { margin-bottom: 8px; }
+label[for="template"] { margin-top: 12px; }
+.contacts, .issues {
+  margin: 6px 0;
+  max-height: 92px;
+  overflow: auto;
+}
+.contacts { list-style: none; padding: 0 4px; }
+.issues { padding-left: 20px; }
+.check { display: flex; align-items: flex-start; gap: 6px; padding: 3px 0; font-weight: 400; }
+.check input { flex: none; margin: 3px 0 0; }
+.consent { margin: 6px 0; }
+#queue-contacts {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+#queue-contacts li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2px 8px;
+  border-top: 1px solid GrayText;
+  padding: 5px 4px;
+}
+#queue-contacts [aria-current="true"] { font-weight: 700; }
+.actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+footer { margin-top: 12px; border-top: 1px solid GrayText; padding-top: 8px; }
+dialog { width: calc(100% - 24px); border: 1px solid GrayText; border-radius: 6px; padding: 12px; }
+dialog::backdrop { background: #0005; }
