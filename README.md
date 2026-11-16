@@ -24,6 +24,10 @@ Se já tiver a extensão instalada, clique em **Recarregar** no cartão em `chro
 
 É tudo bem auto explicativo, você da conta 👍 no máximo fica o aviso que você tem que apertar ENTER nas mensagens ainda, caso contrario essa extensão seria uma ferramenta de spam e eu não quero o Sundar Pichai batendo na minha porta.
 
+<div align="center">
+  <img width="1920" height="1050" alt="Screenshot From 2026-11-16 19-10-21" src="https://github.com/user-attachments/assets/6899e6cf-5e1b-4149-9590-6a8a15428fc6" />
+</div>
+
 ## Compilação
 
 Para gerar `dist/` a partir do código-fonte, use Node.js 22.12 ou mais recente.
